@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/memoriesm/static/css/main.1f2a067d.chunk.css",
-    "main.js": "/memoriesm/static/js/main.2c4834d3.chunk.js",
-    "main.js.map": "/memoriesm/static/js/main.2c4834d3.chunk.js.map",
+    "main.js": "/memoriesm/static/js/main.4c7792dc.chunk.js",
+    "main.js.map": "/memoriesm/static/js/main.4c7792dc.chunk.js.map",
     "runtime-main.js": "/memoriesm/static/js/runtime-main.0cfacc9e.js",
     "runtime-main.js.map": "/memoriesm/static/js/runtime-main.0cfacc9e.js.map",
     "static/css/2.47e06e2e.chunk.css": "/memoriesm/static/css/2.47e06e2e.chunk.css",
     "static/js/2.9e5b1685.chunk.js": "/memoriesm/static/js/2.9e5b1685.chunk.js",
     "static/js/2.9e5b1685.chunk.js.map": "/memoriesm/static/js/2.9e5b1685.chunk.js.map",
     "index.html": "/memoriesm/index.html",
-    "precache-manifest.71145cf66b7491e4cc0abaa6a8d873c9.js": "/memoriesm/precache-manifest.71145cf66b7491e4cc0abaa6a8d873c9.js",
+    "precache-manifest.dcc16b53a93854c7d0479f20586bf438.js": "/memoriesm/precache-manifest.dcc16b53a93854c7d0479f20586bf438.js",
     "service-worker.js": "/memoriesm/service-worker.js",
     "static/css/2.47e06e2e.chunk.css.map": "/memoriesm/static/css/2.47e06e2e.chunk.css.map",
     "static/css/main.1f2a067d.chunk.css.map": "/memoriesm/static/css/main.1f2a067d.chunk.css.map",
@@ -22,6 +22,6 @@
     "static/css/2.47e06e2e.chunk.css",
     "static/js/2.9e5b1685.chunk.js",
     "static/css/main.1f2a067d.chunk.css",
-    "static/js/main.2c4834d3.chunk.js"
+    "static/js/main.4c7792dc.chunk.js"
   ]
 }
