@@ -151,6 +151,7 @@ width: 100%;
 text-align: center;
 font-size: 18px;
 margin-top: 7px;
+color:black;
 }
 .tables{
 width:100%;
@@ -826,20 +827,38 @@ button.googleLogin {
     font-size: 22px;
     font-weight: bolder;
 }
-.example-enter {
-  opacity: 0.01;
+.redclass{
+  opacity: 0;
+  margin-left: -110%;
+  animation: mymove 0.5s;
+  animation-fill-mode: forwards;
 }
-
-.example-enter.example-enter-active {
-  opacity: 1;
-  transition: opacity 500ms ease-in;
+@keyframes mymove {
+  0%   {margin-left: -110%;opacity: 0;}
+  100% {margin-left: 0%;opacity: 1;}
 }
-
-.example-leave {
-  opacity: 1;
+button.googleLogout {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+  width: 46% !important;
 }
-
-.example-leave.example-leave-active {
-  opacity: 0.01;
-  transition: opacity 300ms ease-in;
+.googleLogout>div{
+  display: none;
+}
+.googleLogout>span{
+  margin-left: 11px;
+  width: 100%;
+  padding: 0px !important;
+}
+.hrclass{
+  margin:5px;
+  margin-left:0px;
+  border-top:1px solid black;
+}
+.formwrap2{
+    width: 100%;
+    margin-top: 20px;
+    transition: all 0.5s;
+    overflow: hidden;
 }

@@ -5,13 +5,15 @@ import Lan from "../pages/language";
 import Pop from "../pages/popup";
 import Themep,{colorProcess} from "../pages/themeprocess";
 
-function Nav(){
-    const t=colorProcess();
-
+function Nav(props){
+	const t=colorProcess();
+	var hm="";
+	if(props.home=="yes")
+	hm=<Link to="/"><div class="homewrap"><div class="homebtn"><img style={{height: "inherit"}} src={require('../media/diary/home.png')}/></div></div></Link>
     return(
 			    <div className="mynav" style={t.navclr} >
-			        <div class="homewrap"><div class="homebtn"></div></div>
-			        <div class="diary">DIARY</div>
+					{hm}
+					<div class="diary">DIARY</div>
 			        <div class="lans">{"english"}</div>
 			    </div>
         

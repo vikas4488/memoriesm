@@ -3,6 +3,7 @@ import {Link,useHistory } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Lan from "../pages/language";
 import Pop from "../pages/popup";
+import {auth} from '../App';
 import GoogleLogin,{GoogleLogout} from 'react-google-login';
 const anime={
     transition:'all 0.5s'
@@ -51,11 +52,11 @@ function Index(){
         const response=await fetch(
                 //'http://127.0.0.1:8000/react/login?format=json',{
                   'https://vikas4488.pythonanywhere.com/react/login?format=json',{
-                    mode: 'no-cors',
+                    //mode: 'no-cors',
                     method: 'POST',
                     headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json',
+                      'Accept': 'application/json, text/plain, */*',
+                      'Content-Type': 'application/json'
                         },
                         body: JSON.stringify(usert),
                 }
@@ -76,11 +77,17 @@ function Index(){
             processLogin(re);
       }
       function processLogin(u){
-        localStorage.setItem('loggedin',true);
-        localStorage.setItem('color',u.fname);
-        localStorage.setItem('color',u.lname);
+        localStorage.setItem('loggedin',1);
+        localStorage.setItem('userId',u.userid);
+        localStorage.setItem('fname',u.fname);
+        localStorage.setItem('lname',u.lname);
+        localStorage.setItem('address',u.address);
+        localStorage.setItem('phone',u.phone);
         localStorage.setItem('color',u.color);
-        history.push("/navigation");
+        auth.authenticate(() => {
+          history.push("/");
+        });
+        
       }
       const logout =(response)=>{
         console.log("Google logout "+JSON.stringify(response))
@@ -123,12 +130,6 @@ function Index(){
     className="googleLogin"
     cookiePolicy={'single_host_origin'}
   />
-  {/* <GoogleLogout
-      clientId="232621114578-iihtvv9gmfrhdn3b3usimcd0sdnq7l5o.apps.googleusercontent.com"
-      buttonText="Logout"
-      onLogoutSuccess={logout}
-    ></GoogleLogout> */}
-
 				</form>
 				<form  id="regformpop" action="" method="post" style={{...anime,marginTop: "75px",display:regdisplay}}>
 					<div className="ipwrap " >

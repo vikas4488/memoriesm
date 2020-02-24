@@ -12,10 +12,10 @@ return(
    
     
     <div className="super-block" style={t.bgclr}>
-        <Nav />
+       
 <div className="big-block " style={t.cardclr,{padding: "5%"}}>
-				 <div className="formwrap" style={{display:"block"}}>
-                <form action="{% url 'dataentry' %}" method="post" >		
+				 <div className="formwrap2" style={{display:"block"}}>
+                <form action="" method="post" >		
     <div className="editdiv smoothborder"><span className="reclabel " style={t.labelclr}><Lan text="work_date"/> :</span> <input className="recordedit " style={t.ipclr} type="datetime-local"  name="wdate" style={{borderBottom:"1px solid",padding:"5px",outline:"none"}}/></div>
 <div className="editdiv smoothborder"><span className="reclabel " style={t.labelclr}><Lan text="attendance_label"/> :</span><input className="recordedit " style={t.ipclr} type="text"  name="attendance" style={{borderBottom:"1px solid",padding:"5px",outline:"none"}} /> </div>
 <div className="editdivblock smoothborder"><div className="reclabeldiv " style={t.labelclr}><Lan text="names_label"/> :</div><textarea className="recordeditdiv" style={t.ipclr,{height:"70px",border:"1px solid",padding:"5px",outline:"none"}}  type="text"  name="names" ></textarea></div>

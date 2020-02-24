@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Lan,{lan} from "../pages/language";
 import Pop from "../pages/popup";
-import Nav from "../pages/navbar";
 import Themep,{colorProcess} from "../pages/themeprocess";
 import ReactCSSTransitionGroup from 'react-transition-group/CSSTransitionGroup';
 
@@ -17,11 +16,11 @@ function ViewRecords(){
         const response=await fetch(
                 //'http://127.0.0.1:8000/react/fetchr?format=json',{
                 'https://vikas4488.pythonanywhere.com/react/fetchr?format=json',{
-                    mode: 'no-cors',
+                    //mode: 'no-cors',
                     method: 'POST',
                     headers: {
-                        'Accept': 'application/json',
-                        'Content-Type': 'application/json',
+                        'Accept': 'application/json, text/plain, */*',
+                      'Content-Type': 'application/json'
                         },
                         body: JSON.stringify({
                             userId:localStorage.getItem('userId'),
@@ -34,7 +33,7 @@ function ViewRecords(){
       }
     return(
         <div className="super-block" style={t.bgclr} >
-            <Nav />
+            
             <SearchDiv records={re}/>
             {re.map((u,i)=>(
                 <MainRecord key={i} record={u}></MainRecord>
@@ -45,7 +44,8 @@ function ViewRecords(){
 }
 function SearchDiv(props){
     const records=props.records;
-    var fcomponent1=  <form class="frm" action="" method="post" >
+    const[aniclass,setaniclass]=useState("redclass");
+    const fcomponent1=  <form className={aniclass} action="" method="post" >
     <div  id="on-date-div" style={{display:"block"}}>
         <div className="searchlabel " style={t.labelclr} ><Lan text="search_specific_date"/></div>
         <input className="icolor" style={t.ipclr}  type="date" value="" name="specificdate"/>
@@ -53,44 +53,43 @@ function SearchDiv(props){
       <div className="searchbtn" style={t.btncnf,{ margin:"7px"}}><Lan text="search_label"/></div>
       </form>
 
-    var fcomponent2=  <form class="frm" action="" method="post" >
+const fcomponent2=  <form className={aniclass} action="" method="post" >
     <div  id="date-range-div">
       <div className="searchlabel" style={t.labelclr} ><span style={{marginLeft: "10%"}}><Lan text="start_date"/></span><span style={{float: "right",marginRight: "20%"}}><Lan text="end_date"/></span></div>
       <input className="icolor " style={t.ipclr} value=""  type="date" name="date1"/>
       <input className="icolor " style={t.ipclr} value=""  type="date" name="date2"/>
      </div>
-     <div className="searchbtn" style={t.btncnf,{ margin:"7px",display:"none"}}><Lan text="search_label"/></div>
+     <div className="searchbtn" style={t.btncnf,{ margin:"7px"}}><Lan text="search_label"/></div>
      </form>
     
-    var fcomponent3= <form class="frm" action="" method="post" >
+    const fcomponent3= <form className={aniclass} action="" method="post" >
     <div  id="on-word-div">
       <div className="searchlabel " style={t.labelclr} ><Lan text="search_by_keyword"/></div>
      <input className="icolor" style={t.ipclr}  type="text" placeHolder="type here" name="searchkey"/>
      </div>
-     <div className="searchbtn" style={t.btncnf,{ margin:"7px",display:"none"}}><Lan text="search_label"/></div>
+     <div className="searchbtn" style={t.btncnf,{ margin:"7px"}}><Lan text="search_label"/></div>
      </form>
      function showSearch(e,comp){
+        var el = document.getElementsByClassName('redclass')[0];
+        el.style.animation = 'none';
+        var s=el.offsetHeight; /* trigger reflow */
+        el.style.animation = null; 
         setfcomponent(eval(comp));
     }
-    const [fcomponent,setfcomponent]=useState(fcomponent1);
-    //setfcomponent(fcomponent1);
+    const [Fcomponent,setfcomponent]=useState(fcomponent1);
+    
     return(   
         <div className="searchdiv">
 
         <div className="search-wrap">
    <div className="search-menu-wrap">
-   <div className="search-nav" onClick={e => showSearch(e,"fcomponent1")} style={t.btnpro, {boxShadow:"0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2)"}} id="on-date">date</div>
+   <div className="search-nav" onClick={e => showSearch(e,"fcomponent1")} style={t.btnpro} id="on-date">date</div>
    <div className="search-nav" onClick={e => showSearch(e,"fcomponent2")} style={t.btnpro}   id="date-range">date range</div>
    <div className="search-nav" onClick={e => showSearch(e,"fcomponent3")} style={t.btnpro}  id="on-word">words</div>
    </div>
 </div>
        <div className="searchwrap " style={t.cardclr} >
-        <ReactCSSTransitionGroup component="form"
-        transitionName="example"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}>
-       {fcomponent}
-       </ReactCSSTransitionGroup>
+       {Fcomponent}
            </div>
         {records.length==0 &&
     <form action="" method="post" >
