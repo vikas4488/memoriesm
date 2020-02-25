@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/memoriesm/static/css/main.1f2a067d.chunk.css",
-    "main.js": "/memoriesm/static/js/main.4c7792dc.chunk.js",
-    "main.js.map": "/memoriesm/static/js/main.4c7792dc.chunk.js.map",
+    "main.css": "/memoriesm/static/css/main.0c21a16e.chunk.css",
+    "main.js": "/memoriesm/static/js/main.7c94d918.chunk.js",
+    "main.js.map": "/memoriesm/static/js/main.7c94d918.chunk.js.map",
     "runtime-main.js": "/memoriesm/static/js/runtime-main.0cfacc9e.js",
     "runtime-main.js.map": "/memoriesm/static/js/runtime-main.0cfacc9e.js.map",
     "static/css/2.47e06e2e.chunk.css": "/memoriesm/static/css/2.47e06e2e.chunk.css",
-    "static/js/2.9e5b1685.chunk.js": "/memoriesm/static/js/2.9e5b1685.chunk.js",
-    "static/js/2.9e5b1685.chunk.js.map": "/memoriesm/static/js/2.9e5b1685.chunk.js.map",
+    "static/js/2.7cbd9ba8.chunk.js": "/memoriesm/static/js/2.7cbd9ba8.chunk.js",
+    "static/js/2.7cbd9ba8.chunk.js.map": "/memoriesm/static/js/2.7cbd9ba8.chunk.js.map",
     "index.html": "/memoriesm/index.html",
-    "precache-manifest.dcc16b53a93854c7d0479f20586bf438.js": "/memoriesm/precache-manifest.dcc16b53a93854c7d0479f20586bf438.js",
+    "precache-manifest.f0dfff942d0c48168b84bc1a65addd3c.js": "/memoriesm/precache-manifest.f0dfff942d0c48168b84bc1a65addd3c.js",
     "service-worker.js": "/memoriesm/service-worker.js",
     "static/css/2.47e06e2e.chunk.css.map": "/memoriesm/static/css/2.47e06e2e.chunk.css.map",
-    "static/css/main.1f2a067d.chunk.css.map": "/memoriesm/static/css/main.1f2a067d.chunk.css.map",
-    "static/js/2.9e5b1685.chunk.js.LICENSE": "/memoriesm/static/js/2.9e5b1685.chunk.js.LICENSE",
+    "static/css/main.0c21a16e.chunk.css.map": "/memoriesm/static/css/main.0c21a16e.chunk.css.map",
+    "static/js/2.7cbd9ba8.chunk.js.LICENSE": "/memoriesm/static/js/2.7cbd9ba8.chunk.js.LICENSE",
+    "static/media/home.png": "/memoriesm/static/media/home.5abb3c08.png",
     "static/media/icons8about.png": "/memoriesm/static/media/icons8about.e6a42e2a.png",
     "static/media/logo.svg": "/memoriesm/static/media/logo.5d5d9eef.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.0cfacc9e.js",
     "static/css/2.47e06e2e.chunk.css",
-    "static/js/2.9e5b1685.chunk.js",
-    "static/css/main.1f2a067d.chunk.css",
-    "static/js/main.4c7792dc.chunk.js"
+    "static/js/2.7cbd9ba8.chunk.js",
+    "static/css/main.0c21a16e.chunk.css",
+    "static/js/main.7c94d918.chunk.js"
   ]
 }
